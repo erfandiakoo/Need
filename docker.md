@@ -32,5 +32,7 @@ docker run --name berlin -e TEST_DEV=pp -p 8181:8181 -d erfandiakoo/backend:1.0
 
 docker run -d -p 6379:6379 -v redis_data:/data --name denver redis
 
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=yourStrong(!)Password" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+
 curl -H "Origin: https://erfandiakoo.dev" --verbose https://api.erfandiakoo.dev/v1
 curl -H "Origin: http://app.erfandiakoo.dev" --verbose http://localhost:8181
