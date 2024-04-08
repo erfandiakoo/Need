@@ -31,3 +31,9 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=yourStrong(!)Password" -p 14
 
 curl -H "Origin: https://erfandiakoo.dev" --verbose https://api.erfandiakoo.dev/v1
 curl -H "Origin: http://app.erfandiakoo.dev" --verbose http://localhost:8181
+
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=YourPassword123' \
+-p 1433:1433 --name sqlserver_container \
+-v sqlserver_data:/var/opt/mssql \
+-d mcr.microsoft.com/mssql/server
+
