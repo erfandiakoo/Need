@@ -26,6 +26,11 @@ docker run --name berlin -e TEST_DEV=pp -p 80:80 -d erfandiakoo/backend:1.0
 
 docker run -d -p 6379:6379 -v redis_data:/data --name "NAME" redis
 
+docker cp foo.txt container_id:/foo.txt
+
+docker cp container_id:/foo.txt foo.txt
+
+
 docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=yourStrong(!)Password" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=YourPassword123' \
