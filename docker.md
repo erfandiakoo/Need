@@ -38,3 +38,5 @@ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=YourPassword123' \
 -v sqlserver_data:/var/opt/mssql \
 -d mcr.microsoft.com/mssql/server
 
+
+psql -U "username" -W -d "database" -f "filepath"
