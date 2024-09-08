@@ -40,3 +40,6 @@ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=YourPassword123' \
 
 
 psql -U "username" -W -d "database" -f "filepath"
+
+docker volume ls --format '{{ .Name }}' | xargs -n1 docker volume inspect | jq -r '.[0]|[.Name, .CreatedAt]|@tsv' | sort -k2
+
