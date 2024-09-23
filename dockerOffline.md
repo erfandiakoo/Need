@@ -26,8 +26,12 @@ sudo systemctl enable docker
 
 sudo docker --version
 sudo docker run hello-world
+--get .deb docker packge and copy to new server
+ls /var/cache/apt/archives | grep docker
+scp docker-buildx-plugin_*.deb docker-ce_*.deb docker-ce-cli_*.deb docker-ce-rootless-extras_*.deb docker-compose-plugin_*.deb user@offline-server:/path/to/destination/
 
-
+--install on new server
+sudo dpkg -i /path/to/destination/docker-buildx-plugin_*.deb /path/to/destination/docker-ce_*.deb /path/to/destination/docker-ce-cli_*.deb /path/to/destination/docker-ce-rootless-extras_*.deb /path/to/destination/docker-compose-plugin_*.deb
 
 
 
