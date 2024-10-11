@@ -4,3 +4,4 @@
 - export PATH="$PATH:/Users/yourusername/bin"
 - source ~/.zshrc
 - brew install helm
+- helm repo add bitnami https://charts.bitnami.com/bitnami
